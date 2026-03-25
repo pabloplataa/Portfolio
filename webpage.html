@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Plata Suarez | GNC Engineering Portfolio</title>
+    <style>
+        :root {
+            --accent-color: rgb(20, 55, 115); 
+            --text-main: #333;
+            --text-muted: #666;
+            --bg-color: #f9f9fa;
+            --card-bg: #ffffff;
+            --alert-bg: #fff3cd;
+            --alert-border: #ffe69c;
+            --alert-text: #664d03;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .development-alert {
+            background-color: var(--alert-bg);
+            border: 1px solid var(--alert-border);
+            color: var(--alert-text);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .paper-card {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .paper-title {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .paper-title:hover {
+            text-decoration: underline;
+        }
+
+        .paper-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .paper-abstract {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .read-btn:hover {
+            background-color: rgb(15, 40, 85);
+        }
+
+        footer {
+            max-width: 800px;
+            margin: 4rem auto 1rem auto;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pablo Plata Suarez</h1>
+        <p>Guidance, Navigation & Control Engineer | Purdue University '28</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="development-alert">
+            <strong>Documentation Status:</strong> The documents below are whitepapers and system documentation drafts. They represent ongoing engineering work and are subject to rapid development, testing, and iteration.
+        </div>
+
+        <article class="paper-card">
+            <a href="papers/TADPOLE_Closed_Loop_Control.pdf" target="_blank" class="paper-title">1. TADPOLE Closed Loop Control</a>
+            <div class="paper-meta">Draft · CPLC Throttleable Hotfire Challenge</div>
+            <p class="paper-abstract">Details a feed-forward with feedback-trim controller designed to achieve fast, responsive control. It addresses critical hardware-in-the-loop behaviors including valve stickiness, cavitation, and integral windup mitigation.</p>
+            <a href="papers/TADPOLE_Closed_Loop_Control.pdf" target="_blank" class="read-btn">View Full Paper (PDF)</a>
+        </article>
+
+        <article class="paper-card">
+            <a href="papers/Lumped_Parameter_Model.pdf" target="_blank" class="paper-title">2. Lumped Parameter Model for TOAD Vehicle</a>
+            <div class="paper-meta">Draft · Physics Engine Architecture</div>
+            <p class="paper-abstract">Outlines a physics engine decomposing complex fluid systems into nodes and links. It utilizes a hybrid solver transitioning between Ideal Gas and Bulk Modulus formulations, paired with a Variable-Step Implicit Euler integrator to handle dynamic stiffness.</p>
+            <a href="papers/Lumped_Parameter_Model.pdf" target="_blank" class="read-btn">View Full Paper (PDF)</a>
+        </article>
+
+        <article class="paper-card">
+            <a href="papers/STADPOLE_Throttle_Architecture.pdf" target="_blank" class="paper-title">3. S-TADPOLE Throttle Architecture Draft</a>
+            <div class="paper-meta">Draft · Controller Implementation</div>
+            <p class="paper-abstract">Proposes a decoupled Lead/Follow valve architecture to improve throttle system robustness. The oxidizer circuit actively tracks chamber pressure targets while the fuel circuit independently maintains a constant mixture ratio.</p>
+            <a href="papers/STADPOLE_Throttle_Architecture.pdf" target="_blank" class="read-btn">View Full Paper (PDF)</a>
+        </article>
+
+        <article class="paper-card">
+            <a href="papers/PSP_ASTRAv2_Controls.pdf" target="_blank" class="paper-title">4. PSP ASTRAv2 Controls Whitepaper DRAFT</a>
+            <div class="paper-meta">Draft · GNC & Simulation Workflow</div>
+            <p class="paper-abstract">Comprehensive documentation of the GNC and simulation workflow for the ASTRAv2 VTOL prototype. Features the derivation of an 18-state Multiplicative Extended Kalman Filter (M-EKF), digital filter sequences, and a 3-loop cascaded LQRi tracking controller.</p>
+            <a href="papers/PSP_ASTRAv2_Controls.pdf" target="_blank" class="read-btn">View Full Paper (PDF)</a>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Pablo Plata Suarez. All rights reserved. | <a href="mailto:pplata@purdue.edu" style="color: var(--accent-color); text-decoration: none;">pplata@purdue.edu</a></p>
+    </footer>
+
+</body>
+</html>
